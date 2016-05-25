@@ -19,19 +19,16 @@
     }
 
     $scope.addPerson = function(name, bio) {
-      if ($scope.newTask) {
-        $scope.tasks.push(task);
-        $scope.newTask = null;
+      if ($scope.newName) {
+        $scope.people.push({name: name, bio: bio, bioVisible: false});
+        $scope.newName = null;
+        $scope.newBio = null;
       }
     }
 
-    // $scope.deleteTask = function(index) {
-    //   $scope.tasks.splice(index, 1);
-    // }
-
-    // $scope.isPositive = function(task) {
-    //   return task.indexOf("stupid") == -1;
-    // }
+    $scope.deletePerson = function(index) {
+      $scope.people.splice(index, 1);
+    }
 
     window.$scope = $scope;
   });

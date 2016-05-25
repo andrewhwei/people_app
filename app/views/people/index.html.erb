@@ -1,11 +1,15 @@
 <div ng-app="app">
   <div ng-controller="taskCtrl">
     <li ng-repeat="person in people track by $index" ng-click="showBio($index)">
-      {{ person.name }} <p ng-if="person.bioVisible"> {{ person.bio }}</p>
+      {{ person.name }}
+      <button ng-click="deletePerson($index)">Delete</button>
+      <p ng-if="person.bioVisible"> {{ person.bio }}</p>
     </li>
     
+    <p>No. of people: {{ people.length }}</p>
+
     <input ng-model="newName">
-    <input ng-model="newBIO">
+    <input ng-model="newBio">
     <button ng-click="addPerson(newName, newBio)">Add Person</button>
   </div>
 </div>
