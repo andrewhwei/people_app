@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
   root 'people#index'
-  get 'people', to: 'people#index'
+  get '/people', to: 'people#index'
 
   namespace :api do
     namespace :v1 do
 
-      get 'people', to: 'people#index'
+      get '/people', to: 'people#index'
 
     end
   end
