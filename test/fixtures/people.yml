@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  bio: MyString
-  bioVisible: false
+  bio: MyText
 
 two:
   name: MyString
-  bio: MyString
-  bioVisible: false
+  bio: MyText
